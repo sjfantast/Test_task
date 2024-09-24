@@ -14,11 +14,14 @@ def main(example):
         return ex
 
     if example[1] == '+':
-        return int(example[0]) + int(example[-1])
+        answer = int(example[0]) + int(example[-1])
     elif example[1] == '*':
-        return int(example[0]) * int(example[-1])
+        answer = int(example[0]) * int(example[-1])
     elif example[1] == '-':
-        return int(example[0]) - int(example[-1])
+        answer = int(example[0]) - int(example[-1])
     else:
-        return int(example[0]) // int(example[-1])
+        answer = int(example[0]) // int(example[-1])
 
+    return str(answer)
+
+print(main(input()))
